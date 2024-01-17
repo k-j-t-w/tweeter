@@ -1,0 +1,41 @@
+nav {
+  font-size:36px;
+  width: 100%;
+  min-height: 120px;
+  background-color: #4056A1;
+  padding-inline: 1.5em;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+
+nav div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav span {
+  font-family: Bungee,sans-serif;
+  font-size: 36px;
+  color: #FFFFFF;
+  padding-bottom: 10px;
+ 
+}
+nav span.navLeft {
+  font-family: "Source Sans 3",sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+nav span.navLeftSmall {
+  font-family: "Source Sans 3",sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  
+}
+
+nav i {
+  color: red;
+}
