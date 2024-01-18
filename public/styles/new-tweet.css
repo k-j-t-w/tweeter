@@ -24,7 +24,8 @@ section form textarea {
   font: "Sourse Sans 3","sans-serif";
   font-weight: 600;
   color: rgb(63, 63, 63);
-  height: 45px;
+  
+  outline: none;
 }
 form div {
 display: flex;
