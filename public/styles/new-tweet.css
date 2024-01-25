@@ -3,6 +3,7 @@ section.new-tweet {
   flex-direction: column;
   align-items: center;
   padding-block: 20px;
+  display: none;
 }
 section form {
   display: flex;

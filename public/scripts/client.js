@@ -96,6 +96,10 @@ $(document).ready(function() {
     }
   });
 
+  //Event listener for Write new Tweet
+  $("#nav-right").click(function() {
+    $(".new-tweet").slideToggle();
+  })
 
   loadTweets();
 });
