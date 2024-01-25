@@ -10,6 +10,7 @@ nav {
   justify-content: space-between;
   align-content: center;
   position: fixed;
+  
 }
 
 nav div {
@@ -23,12 +24,14 @@ nav span {
   font-size: 36px;
   color: #FFFFFF;
   padding-bottom: 10px;
+  
  
 }
 nav span.navLeft {
   font-family: "Source Sans 3",sans-serif;
   font-size: 24px;
   font-weight: 600;
+  
 }
 nav span.navLeftSmall {
   font-family: "Source Sans 3",sans-serif;
@@ -39,4 +42,27 @@ nav span.navLeftSmall {
 
 nav i {
   color: red;
+  padding-top: 50px;
+  position: absolute;
+}
+
+#nav-right:hover ~ #arrow-icon{
+  animation-name: upndown;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+nav i:hover {
+  
+  animation-name: upndown;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes upndown {
+  0%   {padding-top:50px;}
+  25%  {padding-top:60px;}
+  50%  {padding-top:50px;}
+  75%  {padding-top:60px;}
+  100% {padding-top:50px;}
 }
