@@ -85,5 +85,34 @@ const renderTweets = function(tweetsArray) {
   }
 }
 
+// Event listener for form submission
+$("#tweet-text-form").on("submit", function(event) {
+
+  // Prevents default form submission
+  event.preventDefault();
+  // serialize the data
+  const serializedTweet = $("#tweet-text-form").serialize();
+
+  // Subit a POST request to the server
+  $.ajax({
+    method: "POST",
+    url: "/tweets",
+    data: serializedTweet,
+    success: function(result){
+      console.log("Tweet was posted successfully");
+    },
+    error: function(err){
+      console.log("There was an error ",err);
+    }
+  });
+  // console.log(serializedTweet);
+  // console.log("In the event handler")
+});
+
 renderTweets(data);
 });
+
+// http://localhost:8080/tweets - POST (Send a payload of tweet to the Server and say please save this!)
+
+// http://localhost:8080/tweets - GET
+
