@@ -15,6 +15,7 @@ form label {
   font-weight: 600;
   color: rgb(63, 63, 63);
   font-size: 30px;
+  padding-bottom: 10px;
 }
 section form textarea {
   background-color: transparent;
@@ -43,4 +44,30 @@ padding-inline: 10px;
 form output {
 font-family: Bungee;
 font-size: 20px;
+}
+
+form button:hover {
+  box-shadow: 3px 3px #4057a157;
+  background-color: #34457c;
+}
+
+form button:active {
+  
+  background-color: #6778b3;
+}
+
+form#tweet-text-form span.error-long {
+  background-color: #FEE0DF;
+  color: red;
+  padding: 5px;
+  display: none;
+  
+}
+
+form#tweet-text-form span.error-empty {
+  background-color: #FEE0DF;
+  color: red;
+  padding: 5px;
+  display: none;
+  
 }

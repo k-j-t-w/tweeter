@@ -68,10 +68,11 @@ $(document).ready(function() {
     // serialize the data
     const serializedTweet = $("#tweet-text-form").serialize();
     //Error handling/ validation
-    if (serializedTweet.length > 140) {
-      alert("Tweet is to long, please shorten");
-    } else if (serializedTweet === null) {
-      alert("Cannot post empty Tweet");
+    if ($("#tweet-text").val().length > 140) {
+      $('.error-long').show();
+    } else if (!$("#tweet-text").val()) {
+      $('.error-empty').show();
+
     } else {
  
 
@@ -87,8 +88,11 @@ $(document).ready(function() {
           console.log("There was an error ",err);
         }
       });
+
       loadTweets();
       document.getElementById("tweet-text-form").reset();
+      $('.error-long').hide();
+      $('.error-empty').hide();
     }
   });
 

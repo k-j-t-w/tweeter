@@ -50,7 +50,7 @@ article.tweet p.tweet-body{
   margin: 0;
   padding-inline: 20px;
   padding-block: 50px;
-
+  overflow-wrap: break-word;
 }
 
 article.tweet footer {

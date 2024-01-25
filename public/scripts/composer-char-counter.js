@@ -2,17 +2,20 @@ $(document).ready(function() {
 
 let count = 0;
 
-$("#tweet-text").on("keydown", function() {
+$("#tweet-text").on("input", function() {
+  $('.error-long').hide();
+  $('.error-empty').hide();
+
   const $this = $(this);
-  count = $this.val().length;
+  count = $("#tweet-text").val().length;
+  console.log($("#tweet-text"))
 
-
-  let $counter = $this.parent('form').find('.counter')
-  $counter.val(140 - count);
+  $("#counter-140").text(140 - count);
+  console.log(count)
   if (count > 140) {
-    $counter.css('color', 'red');
+    $("#counter-140").css('color', 'red');
   } else {
-    $counter.css('color', 'rgb(63, 63, 63)');
+    $("#counter-140").css('color', 'rgb(63, 63, 63)');
   }
 });
 
