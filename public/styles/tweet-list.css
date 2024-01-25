@@ -6,6 +6,11 @@ article.tweet {
   margin-bottom: 30px;
 }
 
+#tweets-container {
+display: flex;
+flex-direction: column-reverse;
+}
+
 
 article.tweet header {
   display: flex;

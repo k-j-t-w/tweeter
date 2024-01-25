@@ -1,26 +1,5 @@
 $(document).ready(function() {
 
-// converts timestamp to a readable string
-// const timestampToReadable = function(timestamp) {
-//   const currentTimestamp = Math.floor(Date.now() / 1000); //convert to seconds
-//   const tweetTime = Math.floor(timestamp / 1000); //convert to seconds
-//   const timeDifference = currentTimestamp - tweetTime;
-
-//   if (timeDifference < 60){
-//     return "just now";
-//   } else if (timeDifference < 3600){
-//     const minutesAgo = Math.floor(timeDifference / 60);
-//         return `${minutesAgo} ${minutesAgo === 1 ? 'minute' : 'minutes'} ago`;
-//   } else if (timeDifference < 86400) {
-//      const hoursAgo = Math.floor(timeDifference / 3600);
-//      return `${hoursAgo} ${hoursAgo === 1 ? 'hour' : 'hours'} ago`;
-//   } else {
-//      const daysAgo = Math.floor(timeDifference / 86400);
-//      return `${daysAgo} ${daysAgo === 1 ? 'day' : 'days'} ago`;
-//   }
-
-// }
-
 const createTweetElement = function (tweetObject) {
   const $tweet = $(`
   <article class="tweet">
