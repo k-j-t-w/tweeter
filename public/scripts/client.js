@@ -102,6 +102,25 @@ $(document).ready(function() {
     $("#tweet-text").focus();
   })
 
+  // Event listener for scroll
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 100) {
+      $("#scroll-bttn").fadeIn();
+  } else {
+    $("#scroll-bttn").fadeOut();
+  }
+  })
+
+
+  // Event listener for scroll button
+  $("#scroll-bttn").click(function() {
+    window.scrollTo({
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth'
+    });
+  })
+
   loadTweets();
 });
 

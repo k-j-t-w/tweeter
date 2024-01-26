@@ -30,6 +30,27 @@ main {
   display: flex;
   flex-direction: column;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+#scroll-bttn {
+  display:block;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  border: 0px;
+  background-color: rgb(255, 78, 78);
+  right: 30px;
+  bottom: 30px;
+  position: fixed;
+  filter: drop-shadow(3px 3px #791c2165);
+  display: none;
+  cursor: pointer;
+}
+
+#scroll-bttn:hover {
+  background-color: rgb(247, 51, 51);
+}
+
+.fa-angles-up {
+  color:#f4f1ec;
+  font-size: 35px;
+}
