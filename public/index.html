@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Disables viewport zoom -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <!-- TimeAgo Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -46,6 +48,7 @@
       </div>
       
     </nav>
+    <div class="content">
     <header class="top-header">
       <div>
           <img src="/images/profile-hex.png" alt="Profile Picture simple hexagon"> 
@@ -58,6 +61,7 @@
   </header>
 
     <!-- Page-specific (main) content here -->
+    
     <main class="container">
       <section class="new-tweet" >
         <form  method="POST" action="/tweets/" id="tweet-text-form">
@@ -76,6 +80,7 @@
       </container>
       
     </main>
+  </div>
     <button id="scroll-bttn"> 
       <i class="fa-solid fa-angles-up"></i>
     </button>

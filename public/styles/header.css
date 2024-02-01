@@ -28,3 +28,21 @@ header div h2.thin {
   padding-left: 5px;
   margin-top: 0px;
 }
+
+@media only screen and (min-width: 1024px) {
+ header.top-header {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 140px;
+  height: 400px;
+  padding-top: 30px;
+  position: sticky;
+  top: 180px;
+ }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  header.top-header {
+    padding-top: 120px;
+    height: 500px;
+  }
+}
