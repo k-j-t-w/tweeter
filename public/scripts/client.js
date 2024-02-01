@@ -1,11 +1,13 @@
 $(document).ready(function() {
 
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+
+  //Function to create new tweets
   const createTweetElement = function(tweetObject) {
     const $tweet = $(`
   <article class="tweet">
@@ -36,6 +38,7 @@ $(document).ready(function() {
 
   };
 
+  // function to call a GET request to load tweets from db
   const loadTweets = function() {
 
     $.ajax({
@@ -100,26 +103,25 @@ $(document).ready(function() {
   $("#nav-right").click(function() {
     $(".new-tweet").slideToggle();
     $("#tweet-text").focus();
-  })
+  });
 
   // Event listener for scroll
-  $(window).scroll(function(){
+  $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $("#scroll-bttn").fadeIn();
-  } else {
-    $("#scroll-bttn").fadeOut();
-  }
-  })
-
+    } else {
+      $("#scroll-bttn").fadeOut();
+    }
+  });
 
   // Event listener for scroll button
   $("#scroll-bttn").click(function() {
     window.scrollTo({
-      top: 0, 
-      left: 0, 
+      top: 0,
+      left: 0,
       behavior: 'smooth'
     });
-  })
+  });
 
   loadTweets();
 });

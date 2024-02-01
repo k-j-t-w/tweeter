@@ -61,10 +61,6 @@ div.content {
   align-items: center;
 }
 
-@media only screen and (min-width: 768px) {
-  
-}
-
 @media only screen and (min-width: 1024px) {
   div.content {
     display: flex;
@@ -79,8 +75,4 @@ div.content {
     margin-left: 90px;
     margin-top: 120px;
   }
-}
-
-@media only screen and (min-width: 768px) {
-  
 }
