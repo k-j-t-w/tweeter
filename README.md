@@ -13,10 +13,10 @@ This repository is the starter code for the project: Students will fork and clon
 4. Go to <http://localhost:8080/> in your browser.
 
 ## Screenshots
-![Desktop Layout](image.png)
-![Tablet Layout](image-1.png)
-![Phone Layout](image-2.png)
-![Desktop Layout with Scroll Button](image-4.png)
+![Desktop Layout](/public/images/DesktopLayout.jpg)
+![Tablet Layout](/public/images/Tabletlayout.jpg)
+![Phone Layout](/public/images/Phonelayout.jpg)
+![Desktop Layout with Scroll Button](/public/images/Desktopwithscrollbutton.jpg)
 ## Dependencies
 
 - Express
