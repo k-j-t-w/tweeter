@@ -86,13 +86,14 @@ $(document).ready(function() {
         data: serializedTweet,
         success: function(result) {
           console.log("Tweet was posted successfully");
+          loadTweets();
         },
         error: function(err) {
           console.log("There was an error ",err);
         }
+        
       });
 
-      loadTweets();
       document.getElementById("tweet-text-form").reset();
       $('.error-long').hide();
       $('.error-empty').hide();
