@@ -68,12 +68,16 @@ $(document).ready(function() {
   $("#tweet-text-form").on("submit", function(event) {
   // Prevents default form submission
     event.preventDefault();
+
     // serialize the data
     const serializedTweet = $("#tweet-text-form").serialize();
+    const trimmedTweet = $("#tweet-text").val().trim();
+  
     //Error handling/ validation
     if ($("#tweet-text").val().length > 140) {
       $('.error-long').show();
-    } else if (!$("#tweet-text").val()) {
+
+    } else if (!trimmedTweet) {
       $('.error-empty').show();
 
     } else {
@@ -87,6 +91,8 @@ $(document).ready(function() {
         success: function(result) {
           console.log("Tweet was posted successfully");
           loadTweets();
+
+          $("#counter-140").text(140);
         },
         error: function(err) {
           console.log("There was an error ",err);
