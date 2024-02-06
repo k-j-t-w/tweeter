@@ -47,6 +47,23 @@ $(document).ready(function() {
       dataType: 'json',
       success: function(data) {
         console.log("Recieved Tweets: ", data);
+        addTweets(data);
+      },
+      error: function(error) {
+        console.log('Error loading tweets: ', error);
+      }
+    });
+
+  };
+
+  const loadAllTweets = function() {
+
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+      dataType: 'json',
+      success: function(data) {
+        console.log("Recieved Tweets: ", data);
         renderTweets(data);
       },
       error: function(error) {
@@ -54,6 +71,12 @@ $(document).ready(function() {
       }
     });
 
+  };
+
+  const addTweets = function(tweetsArray) {
+    const latestTweet = tweetsArray[tweetsArray.length - 1];
+    const $tweet = createTweetElement(latestTweet);
+    $('#tweets-container').append($tweet);
   };
 
   const renderTweets = function(tweetsArray) {
@@ -130,7 +153,7 @@ $(document).ready(function() {
     });
   });
 
-  loadTweets();
+  loadAllTweets();
 });
 
 
